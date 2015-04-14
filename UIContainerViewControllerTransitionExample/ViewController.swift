@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBAction func changeTransition(sender : UISegmentedControl) {
         
-        var toVC = self.storyboard?.instantiateViewControllerWithIdentifier("SampleViewController") as SampleViewController
+        var toVC = self.storyboard?.instantiateViewControllerWithIdentifier("SampleViewController") as! SampleViewController
         var options : UIViewAnimationOptions = .TransitionNone
         
         switch sender.selectedSegmentIndex {
@@ -52,9 +52,8 @@ class ViewController: UIViewController {
             toVC.title = "TransitionNone"
         }
         
-        var fromVC = self.childViewControllers[0] as UIViewController
+        var fromVC = self.childViewControllers[0] as! UIViewController
         
         self.arn_transition(fromVC, toVC: toVC, duration: 1.0, options: options)
     }
 }
-

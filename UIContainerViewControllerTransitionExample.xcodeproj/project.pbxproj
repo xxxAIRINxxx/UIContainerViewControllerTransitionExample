@@ -28,7 +28,6 @@
 		7ACBBEFC1A87782E00235F64 /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		7ACBBEFD1A87782E00235F64 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		7ACBBEFE1A87782E00235F64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7ACBBF081A87784500235F64 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +44,6 @@
 		7ACBBEBF1A87518300235F64 = {
 			isa = PBXGroup;
 			children = (
-				7ACBBF081A87784500235F64 /* Default-568h@2x.png */,
 				7ACBBEF31A87782E00235F64 /* UIContainerViewControllerTransitionExample */,
 				7ACBBEC91A87518300235F64 /* Products */,
 			);
