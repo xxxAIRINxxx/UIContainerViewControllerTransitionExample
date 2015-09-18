@@ -4,8 +4,14 @@
 
 ![capture](capture.gif "capture")
 
-an Example of UIContainerViewController Transition. 
+Example of UIContainerViewController Transition.
+
+## Requirements
+
+* Xcode 7.0
+* iOS 8.1+
+* Swift 2.0
 
 ## License
 
-UIContainerViewControllerTransitionExample is available under the MIT license. See the LICENSE file for more info.
+MIT license. See the LICENSE file for more info.

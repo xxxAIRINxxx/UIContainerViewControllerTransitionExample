@@ -3,20 +3,16 @@
 //  UIContainerViewControllerTransitionExample
 //
 //  Created by xxxAIRINxxx on 2015/02/08.
-//  Copyright (c) 2015 Airin. All rights reserved.
+//  Copyright (c) 2015 xxxAIRINxxx. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     @IBAction func changeTransition(sender : UISegmentedControl) {
         
-        var toVC = self.storyboard?.instantiateViewControllerWithIdentifier("SampleViewController") as! SampleViewController
+        let toVC = self.storyboard?.instantiateViewControllerWithIdentifier("SampleViewController") as! SampleViewController
         var options : UIViewAnimationOptions = .TransitionNone
         
         switch sender.selectedSegmentIndex {
@@ -52,7 +48,7 @@ class ViewController: UIViewController {
             toVC.title = "TransitionNone"
         }
         
-        var fromVC = self.childViewControllers[0] as! UIViewController
+        let fromVC = self.childViewControllers[0] 
         
         self.arn_transition(fromVC, toVC: toVC, duration: 1.0, options: options)
     }
