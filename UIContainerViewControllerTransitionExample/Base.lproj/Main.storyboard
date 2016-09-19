@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UIContainerViewTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="UIContainerViewControllerTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,16 +19,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ny-oO-Edr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                 <connections>
                                     <segue destination="eC8-ku-Q2y" kind="embed" id="wYd-MY-kdd"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-SG-kpQ">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="azd-um-EHx">
-                                        <rect key="frame" x="8" y="16" width="359" height="29"/>
                                         <segments>
                                             <segment title="0"/>
                                             <segment title="1"/>
@@ -37,13 +35,13 @@
                                             <segment title="5"/>
                                             <segment title="6"/>
                                         </segments>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="changeTransition:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7TL-u7-8t7"/>
+                                            <action selector="changeTransitionWithSender:" destination="vXZ-lx-hvc" eventType="valueChanged" id="LjP-bz-M2V"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.71372549019999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="azd-um-EHx" secondAttribute="trailing" constant="8" id="93s-xh-RRZ"/>
                                     <constraint firstAttribute="height" constant="60" id="BPG-8j-QRM"/>
@@ -53,7 +51,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IB3-SG-kpQ" secondAttribute="trailing" id="MBI-Tm-bgt"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IB3-SG-kpQ" secondAttribute="bottom" id="QHR-u0-pnl"/>
@@ -64,7 +62,6 @@
                             <constraint firstItem="0ny-oO-Edr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="z6B-8K-qhC"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +70,7 @@
         <!--Sample View Controller-->
         <scene sceneID="Xc4-YS-9uv">
             <objects>
-                <viewController storyboardIdentifier="SampleViewController" id="3hD-br-nBu" customClass="SampleViewController" customModule="UIContainerViewTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleViewController" id="3hD-br-nBu" customClass="SampleViewController" customModule="UIContainerViewControllerTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gGH-CJ-FDi"/>
                         <viewControllerLayoutGuide type="bottom" id="eIf-1k-Y2K"/>
@@ -83,23 +80,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HUv-8H-w4P">
-                                <rect key="frame" x="87" y="120" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="b6n-cI-qAe"/>
                                     <constraint firstAttribute="width" constant="200" id="hyO-gs-JWl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIN-yq-Mjj">
-                                <rect key="frame" x="16" y="328" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sqL-F7-Ki2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HIN-yq-Mjj" firstAttribute="trailing" secondItem="5O7-gw-fEi" secondAttribute="trailingMargin" id="43K-b1-0eT"/>
                             <constraint firstItem="HIN-yq-Mjj" firstAttribute="leading" secondItem="5O7-gw-fEi" secondAttribute="leadingMargin" id="4F0-6i-HFc"/>
@@ -108,7 +103,6 @@
                             <constraint firstAttribute="centerX" secondItem="HUv-8H-w4P" secondAttribute="centerX" id="xbk-Eb-wGJ"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="HUv-8H-w4P" id="Oyw-1Z-xzF"/>
                         <outlet property="label" destination="HIN-yq-Mjj" id="Eqh-IA-tEp"/>
@@ -116,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iU3-sQ-dd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803.5" y="184.5"/>
+            <point key="canvasLocation" x="1226" y="184"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HH5-gj-x0b">
@@ -131,7 +125,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Seg Control" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on5-8r-N0l">
-                                <rect key="frame" x="16" y="540" width="343" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="1Y3-6z-2sM"/>
                                 </constraints>
@@ -140,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="on5-8r-N0l" firstAttribute="leading" secondItem="DLI-vc-RvN" secondAttribute="leadingMargin" id="Sb5-3x-yeZ"/>
                             <constraint firstItem="jLM-j8-ThT" firstAttribute="top" secondItem="on5-8r-N0l" secondAttribute="bottom" constant="20" id="WMC-TF-kuy"/>

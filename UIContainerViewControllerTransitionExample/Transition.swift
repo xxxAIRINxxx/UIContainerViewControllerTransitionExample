@@ -10,19 +10,19 @@ import UIKit
 
 extension UIViewController {
     
-    func arn_transition(fromVC: UIViewController, toVC: UIViewController, duration: NSTimeInterval, options: UIViewAnimationOptions) {
+    func arn_transition(fromVC: UIViewController, toVC: UIViewController, duration: TimeInterval, options: UIViewAnimationOptions) {
         toVC.view.frame = fromVC.view.frame
         
-        fromVC.willMoveToParentViewController(nil)
+        fromVC.willMove(toParentViewController: nil)
         self.addChildViewController(toVC)
         
-        self.transitionFromViewController(fromVC,
-            toViewController: toVC,
+        self.transition(from: fromVC,
+                        to: toVC,
             duration: 0.5,
             options: options,
             animations: nil) { (finished) -> Void in
             fromVC.removeFromParentViewController()
-            toVC.didMoveToParentViewController(self)
+            toVC.didMove(toParentViewController: self)
         }
     }
 }

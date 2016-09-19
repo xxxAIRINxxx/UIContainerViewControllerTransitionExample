@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SampleViewController: UIViewController {
+final class SampleViewController: UIViewController {
     
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var label : UILabel!
@@ -18,8 +18,9 @@ class SampleViewController: UIViewController {
         
         self.label.text = self.title
         
+        self.imageView.layoutIfNeeded()
         self.imageView.layer.cornerRadius = self.imageView.frame.width * 0.5
         self.imageView.layer.borderWidth = 10.0
-        self.imageView.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.8).CGColor
+        self.imageView.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.8).cgColor
     }
 }
